@@ -1,0 +1,18 @@
+{
+    "id": 133308456,
+    "name": "ZACHOVEKA OT MAGLATA",
+    "author": "Krazmi",
+    "creators": ["Krazmi"],
+    "verifier": "Nikcho2",
+    "verification": "https://youtu.be/VWEWhhpRp5w",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Kocankata",
+            "link": "https://youtu.be/npPt2dqrA7c",
+            "percent": 100,
+            "hz": 180
+        }
+    ]
+}
