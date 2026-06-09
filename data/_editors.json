@@ -1,27 +1,22 @@
 [
     {
         "role": "owner",
-        "name": "List Owner",
+        "name": "Kocankata",
+        "link": "https://www.youtube.com/@emil_parageneratora"
+    },
+    {
+        "role": "admin",
+        "name": "Kocankata",
         "link": "https://www.youtube.com/@Prometheus_Alt"
     },
     {
         "role": "admin",
-        "name": "List Admin",
-        "link": "https://www.youtube.com/@Prometheus_Alt"
+        "name": "Dinbob",
+        "link": "https://www.youtube.com/@dinbobflstudio"
     },
     {
-        "role": "helper",
-        "name": "List Helper",
-        "link": "https://www.youtube.com/@Prometheus_Alt"
-    },
-    {
-        "role": "trial",
-        "name": "Trial List Helper",
-        "link": "https://www.youtube.com/@Prometheus_Alt"
-    },
-    {
-        "role": "dev",
-        "name": "List Coder",
-        "link": "https://www.youtube.com/@Prometheus_Alt"
+        "role": "admin",
+        "name": "CLN",
+        "link": "https://www.youtube.com/@clincok"
     }
 ]
