@@ -18,5 +18,10 @@
         "role": "admin",
         "name": "CLN",
         "link": "https://www.youtube.com/@clincok"
+    },
+    {
+        "role": "dev",
+        "name": "Kocankata",
+        "link": "https://www.youtube.com/@emil_parageneratora"
     }
 ]
