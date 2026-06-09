@@ -10,9 +10,9 @@
     "records": [
         {
           "user": "Kocankata",
-            "link": "https://youtu.be/eaXHrZsHctw",
-            "percent": 100,
-            "hz": 360
+          "link": "https://youtu.be/eaXHrZsHctw",
+          "percent": 100,
+          "hz": 180
         }
     ]
 }
