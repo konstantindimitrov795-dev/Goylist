@@ -9,10 +9,10 @@
     "password": "Free To Copy",
     "records": [
         {
-           "user": "Kocankata",
-           "link": "https://youtu.be/bE63gGMkQ1Q",
-           "percent": 100,
-           "hz": 180
+            "user": "Kocankata",
+            "link": "https://youtu.be/bE63gGMkQ1Q",
+            "percent": 100,
+            "hz": 180
         }
     ]
 }
