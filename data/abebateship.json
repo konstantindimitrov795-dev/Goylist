@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "Dinbob",
+            "link": "https://youtu.be/1lVv7aw5ifQ",
+            "percent": 100,
+            "hz": 165
+        }
     ]
 }
