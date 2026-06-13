@@ -31,6 +31,12 @@
             "link": "https://youtu.be/JcoIBTGXrYI",
             "percent": 100,
             "hz": 60
+        },
+        {
+          "user": "yanshmek",
+          "link": "https://www.youtube.com/watch?v=YWLPK7gCTdU&list=PLb5Ee3D6dnlw",
+          "percent": 100,
+          "hz": 75
         }
     ]
 }
