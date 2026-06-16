@@ -8,5 +8,17 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "MeowRa",
+            "link": "https://youtu.be/H2uJcx0AFUY",
+            "percent": 100,
+            "hz": 165
+        },
+        {
+            "user": "Kocankata",
+            "link": "https://youtu.be/9anN5cjYyJY",
+            "percent": 100,
+            "hz": 180
+        }
     ]
 }
