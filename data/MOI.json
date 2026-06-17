@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "yanshmek",
+            "link": "https://www.youtube.com/watch?v=yUpiosf5aCo&list=PLb5Ee3D6dnlw&index=3",
+            "percent": 100,
+            "hz": 75
+        }
     ]
 }
