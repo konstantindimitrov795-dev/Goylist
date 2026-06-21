@@ -1,0 +1,18 @@
+{
+    "id": 127012214,
+    "name": "Bulgaria Circles",
+    "author": "yanshmek",
+    "creators": ["yanshmek"],
+    "verifier": "yanshmek",
+    "verification": "https://www.youtube.com/watch?v=vBDkK6BRWZo&list=PLb5Ee3D6dnlw",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Kocankata",
+            "link": "https://youtu.be/hSPozP27ZWI",
+            "percent": 100,
+            "hz": 180
+        }
+    ]
+}
