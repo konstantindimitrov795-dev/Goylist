@@ -1,0 +1,18 @@
+{
+    "id": 137220841,
+    "name": "nuzsonic",
+    "author": "Nikcho2",
+    "creators": ["Nikcho2"],
+    "verifier": "Nikcho2",
+    "verification": "https://youtu.be/hEpUgeR7Alo",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Kocankata",
+            "link": "https://youtu.be/ibIsdkSF3S8",
+            "percent": 100,
+            "hz": 180
+        }
+    ]
+}
