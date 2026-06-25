@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "MartiRex",
+            "link": "https://www.youtube.com/watch?v=ja7lICuo2yg",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
