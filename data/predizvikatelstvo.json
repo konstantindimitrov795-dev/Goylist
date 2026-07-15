@@ -1,0 +1,16 @@
+{
+    "id": 144881048,
+    "name": "predizvikatelstvo",
+    "author": "tomch",
+    "creators": ["tomch"],
+    "verifier": "tomch",
+    "verification": "https://youtu.be/aPX5PA8k5fM?si=qvvPOTUC4dv2DRfe",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "keko",
+            "link": "https://youtu.be/F7rLt6W5_8g",
+            "percent": 100,
+            "hz": 144
+        }
