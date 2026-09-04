@@ -132,3 +132,25 @@ input[type="checkbox"] {
     border: 2px solid #fff;
     flex-shrink: 0;
 }
+
+.search-container {
+    padding: 10px;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-background-hover);
+}
+
+.level-search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--color-background-hover);
+    background-color: var(--color-background-hover);
+    color: var(--color-on-background);
+    font-size: 0.9rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.level-search-input:focus {
+    border-color: var(--color-primary);
+}
