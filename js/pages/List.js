@@ -57,7 +57,12 @@ export default {
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
-                            <p>{{ level.id }}</p>
+                            <p class="copy-id-btn" @click="copyId(level.id)" style="cursor: pointer;">
+                                {{ level.id }}
+                                <span class="copy-badge" :class="{ 'copied': copied }">
+                                    {{ copied ? 'Copied!' : 'Copy' }}
+                                </span>
+                            </p>
                         </li>
                         <li>
                             <div class="type-title-sm">Password</div>
@@ -142,6 +147,7 @@ export default {
         loading: true,
         selected: 0,
         search: "",
+        copied: false,
         errors: [],
         roleIconMap,
         store
@@ -150,7 +156,6 @@ export default {
         filteredList() {
             if (!this.list) return [];
             
-            // Attach original list index to keep rank numbers consistent during search
             const indexedList = this.list.map(([item, err], i) => [item, err, i]);
             
             if (!this.search.trim()) return indexedList;
@@ -181,11 +186,9 @@ export default {
         },
     },
     async mounted() {
-        // Hide loading spinner
         this.list = await fetchList();
         this.editors = await fetchEditors();
 
-        // Error handling
         if (!this.list) {
             this.errors = [
                 "Failed to load list. Retry in a few minutes or notify list staff.",
@@ -208,5 +211,15 @@ export default {
     methods: {
         embed,
         score,
+        copyId(id) {
+            if (!id) return;
+            navigator.clipboard.writeText(id.toString()).then(() => {
+                this.copied = true;
+                setTimeout(() => {
+                    this.copied = false;
+                }, 2000);
+            });
+        },
     },
 };
+
