@@ -22,22 +22,15 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
-                <div class="search-container" style="padding: 10px; display: flex; gap: 8px;">
+                <div class="search-container" style="padding: 10px;">
                     <input 
                         type="text" 
                         v-model="search" 
                         placeholder="Search level, creator, or verifier..." 
                         class="level-search-input"
                     />
-                    <button 
-                        @click="isCompact = !isCompact" 
-                        class="view-toggle-btn"
-                        :title="isCompact ? 'Switch to Expanded View' : 'Switch to Compact View'"
-                    >
-                        {{ isCompact ? 'Expanded' : 'Compact' }}
-                    </button>
                 </div>
-                <table class="list" :class="{ 'compact': isCompact }" v-if="filteredList.length > 0">
+                <table class="list" v-if="filteredList.length > 0">
                     <tr v-for="([level, err, originalIndex]) in filteredList">
                         <td class="rank">
                             <p v-if="originalIndex + 1 <= 150" class="type-label-lg">#{{ originalIndex + 1 }}</p>
@@ -154,7 +147,6 @@ export default {
         loading: true,
         selected: 0,
         search: "",
-        isCompact: false,
         copied: false,
         errors: [],
         roleIconMap,
@@ -222,6 +214,15 @@ export default {
         copyId(id) {
             if (!id) return;
             navigator.clipboard.writeText(id.toString()).then(() => {
+                this.copied = true;
+                setTimeout(() => {
+                    this.copied = false;
+                }, 2000);
+            });
+        },
+    },
+};
+         navigator.clipboard.writeText(id.toString()).then(() => {
                 this.copied = true;
                 setTimeout(() => {
                     this.copied = false;
