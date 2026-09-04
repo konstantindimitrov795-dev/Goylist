@@ -1,0 +1,18 @@
+{
+    "id": 142677827,
+    "name": "banan s obelka",
+    "author": "keko",
+    "creators": ["keko"],
+    "verifier": "keko",
+    "verification": "https://youtu.be/TLvH01Hym1A",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "kuci",
+            "link": "https://youtu.be/fXDOoxQ2S_I",
+            "percent": 100,
+            "hz": 180
+        }
+    ]
+}
