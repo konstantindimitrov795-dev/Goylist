@@ -94,11 +94,24 @@ input[type="checkbox"] {
     cursor: pointer;
     margin: 0;
 }
+
 .player-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.player-header h1 {
+    margin: 0 0 8px 0;
+    line-height: 1.1;
+}
+
+.player-header h3 {
+    margin: 0;
+    line-height: 1.2;
 }
 
 .player-pfp {
@@ -107,4 +120,5 @@ input[type="checkbox"] {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #fff;
+    flex-shrink: 0;
 }
