@@ -55,6 +55,12 @@
           "link": "https://www.youtube.com/watch?v=K1hbM48UtxQ",
           "percent": 100,
           "hz": 360
+        },
+        {
+            "user": "cln",
+            "link": "https://youtu.be/F1i9JxctqBc",
+            "percent": 100,
+            "hz": 60
         }
     ]
 }
