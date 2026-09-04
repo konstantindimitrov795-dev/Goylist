@@ -22,19 +22,28 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
-                <table class="list" v-if="list">
-                    <tr v-for="([level, err], i) in list">
+                <div class="search-container" style="padding: 10px;">
+                    <input 
+                        type="text" 
+                        v-model="search" 
+                        placeholder="Search level, creator, or verifier..." 
+                        class="level-search-input"
+                    />
+                </div>
+                <table class="list" v-if="filteredList.length > 0">
+                    <tr v-for="([level, err, originalIndex]) in filteredList">
                         <td class="rank">
-                            <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-if="originalIndex + 1 <= 150" class="type-label-lg">#{{ originalIndex + 1 }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
-                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                            <button @click="selected = i">
+                        <td class="level" :class="{ 'active': selected == originalIndex, 'error': !level }">
+                            <button @click="selected = originalIndex">
                                 <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                             </button>
                         </td>
                     </tr>
                 </table>
+                <p v-else class="type-label-lg" style="padding: 15px; color: #aaa;">No levels found.</p>
             </div>
             <div class="level-container">
                 <div class="level" v-if="level">
@@ -57,7 +66,7 @@ export default {
                     </ul>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected +1 <= 150"><strong>100%</strong> or better to qualify</p>
+                    <p v-else-if="selected + 1 <= 150"><strong>100%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
@@ -132,15 +141,34 @@ export default {
         editors: [],
         loading: true,
         selected: 0,
+        search: "",
         errors: [],
         roleIconMap,
         store
     }),
     computed: {
+        filteredList() {
+            if (!this.list) return [];
+            
+            // Attach original list index to keep rank numbers consistent during search
+            const indexedList = this.list.map(([item, err], i) => [item, err, i]);
+            
+            if (!this.search.trim()) return indexedList;
+            
+            const query = this.search.toLowerCase();
+            return indexedList.filter(([level]) => {
+                if (!level) return false;
+                const nameMatch = level.name?.toLowerCase().includes(query);
+                const authorMatch = level.author?.toLowerCase().includes(query);
+                const verifierMatch = level.verifier?.toLowerCase().includes(query);
+                return nameMatch || authorMatch || verifierMatch;
+            });
+        },
         level() {
-            return this.list[this.selected][0];
+            return this.list[this.selected] ? this.list[this.selected][0] : null;
         },
         video() {
+            if (!this.level) return "";
             if (!this.level.showcase) {
                 return embed(this.level.verification);
             }
