@@ -222,11 +222,7 @@ export default {
         },
     },
 };
-         navigator.clipboard.writeText(id.toString()).then(() => {
-                this.copied = true;
-                setTimeout(() => {
-                    this.copied = false;
-                }, 2000);
+   }, 2000);
             });
         },
     },
