@@ -49,6 +49,17 @@ export async function fetchEditors() {
 export async function fetchLeaderboard() {
     const list = await fetchList();
 
+    // Fetch profile pictures mapping
+    let pfps = {};
+    try {
+        const pfpResult = await fetch(`${dir}/_pfps.json`);
+        if (pfpResult.ok) {
+            pfps = await pfpResult.json();
+        }
+    } catch {
+        console.warn('Could not load _pfps.json');
+    }
+
     const scoreMap = {};
     const errs = [];
     list.forEach(([level, err], rank) => {
@@ -105,16 +116,23 @@ export async function fetchLeaderboard() {
         });
     });
 
-    // Wrap in extra Object containing the user and total score
+    // Wrap in extra Object containing the user, total score, and profile picture
     const res = Object.entries(scoreMap).map(([user, scores]) => {
         const { verified, completed, progressed } = scores;
         const total = [verified, completed, progressed]
             .flat()
             .reduce((prev, cur) => prev + cur.score, 0);
 
+        // Find PFP regardless of case matching
+        const pfpKey = Object.keys(pfps).find(
+            (k) => k.toLowerCase() === user.toLowerCase(),
+        );
+        const pfp = pfpKey ? pfps[pfpKey] : null;
+
         return {
             user,
             total: round(total),
+            pfp,
             ...scores,
         };
     });
