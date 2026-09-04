@@ -13,6 +13,12 @@
             "link": "https://www.youtube.com/watch?v=5PxDDKnVU64",
             "percent": 100,
             "hz": 60
+        },
+        {
+            "user": "Kocankata",
+            "link": "https://youtu.be/plv0Lfg32Gc",
+            "percent": 100,
+            "hz": 180
         }
     ]
 }
