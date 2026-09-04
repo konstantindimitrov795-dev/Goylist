@@ -46,7 +46,13 @@ export default {
                         <div class="player-header">
                             <div>
                                 <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
-                                <h3>{{ entry.total }}</h3>
+                                <h3>{{ localize(entry.total) }}</h3>
+                                <p class="type-body" style="margin-top: 6px; color: #ccc;">
+                                    Hardest completion: 
+                                    <strong style="color: #fff;">
+                                        {{ hardestCompletion ? hardestCompletion.level : 'None' }}
+                                    </strong>
+                                </p>
                             </div>
                             <img 
                                 v-if="entry.pfp" 
@@ -55,7 +61,7 @@ export default {
                                 alt="Profile Picture" 
                             />
                         </div>
-                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
+                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length }})</h2>
                         <table class="table">
                             <tr v-for="score in entry.verified">
                                 <td class="rank">
@@ -83,7 +89,7 @@ export default {
                                 </td>
                             </tr>
                         </table>
-                        <h2 v-if="entry.progressed.length > 0">Progressed ({{entry.progressed.length}})</h2>
+                        <h2 v-if="entry.progressed.length > 0">Progressed ({{ entry.progressed.length }})</h2>
                         <table class="table">
                             <tr v-for="score in entry.progressed">
                                 <td class="rank">
@@ -105,6 +111,12 @@ export default {
     computed: {
         entry() {
             return this.leaderboard[this.selected];
+        },
+        hardestCompletion() {
+            if (!this.entry) return null;
+            const completions = [...this.entry.verified, ...this.entry.completed];
+            if (completions.length === 0) return null;
+            return completions.sort((a, b) => a.rank - b.rank)[0];
         },
     },
     async mounted() {
