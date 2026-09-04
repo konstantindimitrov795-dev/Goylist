@@ -154,3 +154,30 @@ input[type="checkbox"] {
 .level-search-input:focus {
     border-color: var(--color-primary);
 }
+
+.copy-id-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+    transition: opacity 0.2s ease;
+}
+
+.copy-id-btn:hover {
+    opacity: 0.8;
+}
+
+.copy-badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: var(--color-background-hover);
+    color: var(--color-on-background);
+    border: 1px solid var(--color-background-hover);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.copy-badge.copied {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
