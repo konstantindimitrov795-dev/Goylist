@@ -114,6 +114,16 @@ input[type="checkbox"] {
     line-height: 1.2;
 }
 
+.player-header p {
+    margin: 8px 0 0 0;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.player-header p strong {
+    color: #fff;
+}
+
 .player-pfp {
     width: 75px;
     height: 75px;
