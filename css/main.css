@@ -188,31 +188,31 @@ input[type="checkbox"] {
 
 /* Tablet & Mobile Layout Adjustments */
 @media screen and (max-width: 1024px) {
-    header,
-    main {
+    header {
         grid-template-columns: 1fr;
         height: auto;
-        column-gap: 0;
-        row-gap: 1.5rem;
         padding-inline: 1rem;
     }
 
-    main {
-        display: flex;
-        flex-direction: column;
+    main,
+    main.page-list {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 15px !important;
+        gap: 20px !important;
+        grid-template-columns: 1fr !important;
     }
 
+    /* Keep the left level list contained */
     .list-container,
-    .level-container,
-    .meta-container {
-        width: 100%;
-        overflow-y: visible;
-    }
-
-    .list-container {
-        max-height: 250px;
-        border: 1px solid var(--color-background-hover);
-        border-radius: 8px;
+    main.page-list .list-container {
+        width: 100% !important;
+        max-height: 280px !important;
+        overflow-y: auto !important;
+        border: 1px solid var(--color-background-hover) !important;
+        border-radius: 8px !important;
+        background-color: var(--color-background) !important;
     }
 
     .search-container {
@@ -222,10 +222,33 @@ input[type="checkbox"] {
         background-color: var(--color-background);
     }
 
+    /* Main level details section */
+    .level-container,
+    main.page-list .level-container {
+        width: 100% !important;
+        overflow: visible !important;
+        margin-top: 10px !important;
+    }
+
+    .level-container h1 {
+        word-break: break-word !important;
+        margin-bottom: 10px !important;
+    }
+
     .level-container iframe.video {
         width: 100%;
         height: auto;
         aspect-ratio: 16 / 9;
+    }
+
+    /* Meta / Submission Rules Section */
+    .meta-container,
+    main.page-list .meta-container {
+        width: 100% !important;
+        overflow: visible !important;
+        margin-top: 20px !important;
+        border-top: 1px solid var(--color-background-hover) !important;
+        padding-top: 15px !important;
     }
 }
 
