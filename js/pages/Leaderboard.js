@@ -34,15 +34,15 @@ export default {
                                 <p class="type-label-lg">{{ localize(ientry.total) }}</p>
                             </td>
                             <td class="user" :class="{ 'active': selected == i }">
-                                <button @click="selected = i">
+                                <button @click="selectPlayer(i)">
                                     <span class="type-label-lg">{{ ientry.user }}</span>
                                 </button>
                             </td>
                         </tr>
                     </table>
                 </div>
-                <div class="player-container">
-                    <div class="player">
+                <div class="player-container" ref="playerPanel">
+                    <div class="player" v-if="entry">
                         <div class="player-header">
                             <div>
                                 <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
@@ -128,5 +128,13 @@ export default {
     },
     methods: {
         localize,
+        selectPlayer(index) {
+            this.selected = index;
+            this.$nextTick(() => {
+                if (this.$refs.playerPanel) {
+                    this.$refs.playerPanel.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        },
     },
 };
