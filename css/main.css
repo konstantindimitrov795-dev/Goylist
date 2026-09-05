@@ -192,12 +192,31 @@ input[type="checkbox"] {
 @media screen and (max-width: 1024px) {
     header {
         display: flex !important;
+        flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
         width: 100% !important;
         height: auto !important;
-        padding: 12px 16px !important;
+        padding: 10px 12px !important;
         box-sizing: border-box !important;
+        gap: 8px !important;
+    }
+
+    header .nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 12px !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    header .nav a,
+    header .nav router-link,
+    header .nav button {
+        font-size: 0.85rem !important;
+        flex-shrink: 0 !important;
     }
 
     main {
@@ -323,6 +342,14 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.2rem !important;
+    }
+
+    header .logo span {
+        font-size: 0.75rem !important;
+    }
+
     .stats {
         grid-template-columns: 1fr !important;
     }
