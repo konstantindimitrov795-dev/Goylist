@@ -61,37 +61,30 @@
     .nav {
         display: flex !important;
         flex-wrap: wrap !important;
-        align-items: center !important;
         width: 100% !important;
-        row-gap: 6px !important;
-        column-gap: 12px !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        column-gap: 1rem !important;
+        row-gap: 8px !important;
     }
 
-    /* Force all 3 tabs into a full-width container on the bottom row */
-    .nav .nav__tab {
-        padding-inline: 4px !important;
-        font-size: 0.85rem !important;
-        white-space: nowrap !important;
-        flex-shrink: 0 !important;
-        order: 2 !important;
-    }
-
-    /* Push action buttons to the top right side */
+    /* Force the action buttons to occupy top right */
     .nav .nav__actions {
-        width: auto !important;
-        flex: 1 0 auto !important;
+        order: 1 !important;
+        width: 100% !important;
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center !important;
-        order: 1 !important;
-        margin-left: auto !important;
+        margin-bottom: 2px !important;
     }
 
-    /* Force a clear breakpoint so List, Leaderboard, and Roulette are all on row 2 together */
-    .nav .nav__actions::after {
-        content: "" !important;
-        flex-basis: 100% !important;
-        height: 0 !important;
+    /* Force all 3 tab links onto row 2 together */
+    .nav .nav__tab {
+        order: 2 !important;
+        font-size: 0.85rem !important;
+        padding-inline: 0.2rem !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
     }
 
     .nav .nav__actions .nav__icon {
