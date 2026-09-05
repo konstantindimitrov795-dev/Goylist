@@ -268,15 +268,12 @@ input[type="checkbox"] {
         box-sizing: border-box !important;
     }
 
-    /* Leaderboard Container Fixes */
-    main.page-leaderboard-flex,
-    main.page-leaderboard,
-    .board-container,
+    /* Leaderboard Component Fixes */
     .board {
         width: 100% !important;
-        height: 260px !important;
-        max-height: 260px !important;
-        overflow-y: scroll !important;
+        height: 280px !important;
+        max-height: 280px !important;
+        overflow-y: auto !important;
         -webkit-overflow-scrolling: touch !important;
         border: 1px solid var(--color-background-hover) !important;
         border-radius: 8px !important;
@@ -284,13 +281,11 @@ input[type="checkbox"] {
         box-sizing: border-box !important;
     }
 
-    .player-container,
     .player {
         width: 100% !important;
         height: auto !important;
         overflow: visible !important;
         box-sizing: border-box !important;
-        padding-top: 12px !important;
     }
 
     .player .stats {
@@ -353,4 +348,4 @@ input[type="checkbox"] {
     min-width: 60px !important;
     text-align: right !important;
     flex-shrink: 0 !important;
-}
+        }
