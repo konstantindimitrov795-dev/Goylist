@@ -52,3 +52,45 @@
 .nav .nav__actions .nav__cta:hover:not(:active) {
     transform: translateY(-2px);
 }
+
+/* ==========================================
+   Mobile Header Navigation Fix
+   ========================================== */
+
+@media screen and (max-width: 1024px) {
+    .nav {
+        column-gap: 0.75rem !important;
+        row-gap: 0.5rem !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .nav .nav__tab {
+        padding-inline: 0.25rem !important;
+        font-size: 0.85rem !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+
+    .nav .nav__actions {
+        flex: initial !important;
+        margin-left: auto !important;
+        gap: 0.25rem !important;
+    }
+
+    .nav .nav__actions .nav__icon {
+        height: 2.25rem !important;
+        width: 2.25rem !important;
+    }
+
+    .nav .nav__actions .nav__icon img {
+        height: 1.25rem !important;
+    }
+
+    .nav .nav__actions .nav__cta {
+        margin-left: 0.5rem !important;
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.85rem !important;
+    }
+}
