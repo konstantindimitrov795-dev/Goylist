@@ -406,3 +406,18 @@ input[type="checkbox"] {
     text-align: right !important;
     flex-shrink: 0 !important;
 }
+
+/* ==========================================
+   Force Text Color in Player Section
+   ========================================== */
+
+.player-container,
+.player-container *,
+.player-header,
+.player-header *,
+.player-header p,
+.player-header p *,
+.player-header a,
+.player-header a * {
+    color: var(--color-on-background) !important;
+}
