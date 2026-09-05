@@ -73,6 +73,14 @@ header .nav {
     flex: 1;
 }
 
+/* Adjust header link underline offset and thickness */
+header .nav a,
+header .nav router-link,
+header .nav button {
+    text-underline-offset: 6px !important;
+    text-decoration-thickness: 2px !important;
+}
+
 main {
     height: 0;
     flex: 1;
@@ -218,6 +226,8 @@ input[type="checkbox"] {
     header .nav button {
         font-size: 0.85rem !important;
         flex-shrink: 0 !important;
+        text-underline-offset: 6px !important;
+        text-decoration-thickness: 2px !important;
     }
 
     main {
@@ -420,4 +430,10 @@ input[type="checkbox"] {
 .player-header a,
 .player-header a * {
     color: var(--color-on-background) !important;
+}
+
+/* Global Navigation Underline Spacing */
+header .nav * {
+    text-underline-offset: 6px !important;
+    text-decoration-thickness: 2px !important;
 }
