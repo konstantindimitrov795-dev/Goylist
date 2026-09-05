@@ -73,14 +73,6 @@ header .nav {
     flex: 1;
 }
 
-/* Adjust header link underline offset and thickness */
-header .nav a,
-header .nav router-link,
-header .nav button {
-    text-underline-offset: 6px !important;
-    text-decoration-thickness: 2px !important;
-}
-
 main {
     height: 0;
     flex: 1;
@@ -226,8 +218,6 @@ input[type="checkbox"] {
     header .nav button {
         font-size: 0.85rem !important;
         flex-shrink: 0 !important;
-        text-underline-offset: 6px !important;
-        text-decoration-thickness: 2px !important;
     }
 
     main {
@@ -420,6 +410,51 @@ input[type="checkbox"] {
 /* ==========================================
    Force Text Color in Player Section
    ========================================== */
+
+.player-container,
+.player-container *,
+.player-header,
+.player-header *,
+.player-header p,
+.player-header p *,
+.player-header a,
+.player-header a * {
+    color: var(--color-on-background) !important;
+}
+
+/* ==========================================
+   Fix Active Nav Underline Separation
+   ========================================== */
+
+/* 1. If using standard CSS text-decoration */
+header .nav *,
+header a,
+header button,
+.nav-link,
+.router-link-active {
+    text-underline-offset: 8px !important;
+    text-decoration-thickness: 3px !important;
+}
+
+/* 2. If using border-bottom or padding tricks for the active bar */
+header .nav a,
+header .nav button,
+header .nav router-link,
+header a.active,
+header .active,
+header .router-link-exact-active {
+    padding-bottom: 6px !important;
+    margin-bottom: 2px !important;
+}
+
+/* 3. If using ::after pseudo-elements for active indicator bar */
+header .nav *::after,
+header a::after,
+.router-link-active::after,
+.active::after {
+    bottom: -6px !important;
+}
+=================== */
 
 .player-container,
 .player-container *,
