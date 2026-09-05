@@ -60,26 +60,27 @@
 @media screen and (max-width: 1024px) {
     .nav {
         display: flex !important;
-        flex-wrap: nowrap !important;
+        flex-wrap: wrap !important;
         align-items: center !important;
-        justify-content: flex-start !important;
-        column-gap: 0.4rem !important;
         width: 100% !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
+        gap: 8px !important;
     }
 
     .nav .nav__tab {
-        padding-inline: 0.2rem !important;
-        font-size: 0.8rem !important;
+        padding-inline: 4px !important;
+        font-size: 0.85rem !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
+        order: 2 !important; /* Forces tabs to sit neatly underneath */
     }
 
     .nav .nav__actions {
-        flex: initial !important;
+        flex: 1 0 auto !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        order: 1 !important; /* Forces icons to top right */
         margin-left: auto !important;
-        gap: 0.15rem !important;
     }
 
     .nav .nav__actions .nav__icon {
@@ -93,7 +94,7 @@
 
     .nav .nav__actions .nav__cta {
         margin-left: 0.25rem !important;
-        padding: 0.4rem 0.6rem !important;
+        padding: 0.3rem 0.5rem !important;
         font-size: 0.8rem !important;
     }
 }
