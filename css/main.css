@@ -268,8 +268,20 @@ input[type="checkbox"] {
         box-sizing: border-box !important;
     }
 
-    /* Leaderboard Component Fixes */
-    .board {
+    /* Leaderboard Page Specific Fixes */
+    main.page-leaderboard-flex,
+    main.page-leaderboard {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+
+    .board-container,
+    .board,
+    main.page-leaderboard-flex .board,
+    main.page-leaderboard .board {
+        display: block !important;
         width: 100% !important;
         height: 280px !important;
         max-height: 280px !important;
@@ -281,11 +293,20 @@ input[type="checkbox"] {
         box-sizing: border-box !important;
     }
 
-    .player {
+    /* Override hidden player panel on mobile */
+    .player-container,
+    .player,
+    main.page-leaderboard-flex .player,
+    main.page-leaderboard .player {
+        display: block !important;
+        visibility: visible !important;
         width: 100% !important;
         height: auto !important;
         overflow: visible !important;
         box-sizing: border-box !important;
+        margin-top: 15px !important;
+        border-top: 1px solid var(--color-background-hover) !important;
+        padding-top: 15px !important;
     }
 
     .player .stats {
@@ -348,4 +369,4 @@ input[type="checkbox"] {
     min-width: 60px !important;
     text-align: right !important;
     flex-shrink: 0 !important;
-        }
+}
