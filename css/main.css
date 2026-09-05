@@ -263,11 +263,6 @@ input[type="checkbox"] {
         text-align: center !important;
     }
 
-    /* Table Adjustments */
-    .records {
-        width: 100% !important;
-    }
-
     /* Meta / Sidebar Container */
     .meta-container,
     main.page-list .meta-container {
@@ -288,4 +283,49 @@ input[type="checkbox"] {
         min-height: 48px !important;
         font-size: 1rem !important;
     }
+}
+
+/* ==========================================
+   Fix Records Table Column Overlapping
+   ========================================== */
+
+.level .records {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-top: 10px !important;
+}
+
+.level .records tr.record {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 6px 0 !important;
+    gap: 12px !important;
+}
+
+.level .records td {
+    padding: 0 !important;
+}
+
+.level .records td.percent {
+    min-width: 60px !important;
+    flex-shrink: 0 !important;
+}
+
+.level .records td.user {
+    flex-grow: 1 !important;
+    text-align: left !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+.level .records td.mobile {
+    flex-shrink: 0 !important;
+}
+
+.level .records td.hz {
+    min-width: 60px !important;
+    text-align: right !important;
+    flex-shrink: 0 !important;
 }
