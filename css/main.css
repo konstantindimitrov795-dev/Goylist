@@ -26,12 +26,15 @@ header.dark {
 html,
 body {
     height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    margin: 0;
 }
 
 header,
@@ -180,4 +183,109 @@ input[type="checkbox"] {
 .copy-badge.copied {
     background-color: var(--color-primary);
     color: var(--color-on-primary);
+}
+
+/* ==========================================
+   Full-Screen Mobile (AREDL Style) Adjustments
+   ========================================== */
+
+@media screen and (max-width: 1024px) {
+    header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 12px 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    main,
+    main.page-list {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        width: 100% !important;
+        padding: 12px !important;
+        box-sizing: border-box !important;
+        gap: 16px !important;
+        grid-template-columns: none !important;
+    }
+
+    /* List Navigation Box */
+    .list-container,
+    main.page-list .list-container {
+        width: 100% !important;
+        max-height: 260px !important;
+        overflow-y: auto !important;
+        border: 1px solid var(--color-background-hover) !important;
+        border-radius: 8px !important;
+        background-color: var(--color-background) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Active Level Card Box */
+    .level-container,
+    main.page-list .level-container {
+        width: 100% !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+    }
+
+    .level-container h1 {
+        font-size: 1.8rem !important;
+        word-break: break-word !important;
+        margin-top: 0 !important;
+    }
+
+    /* Video Player Full Container Width */
+    .level-container iframe.video {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        border-radius: 8px !important;
+    }
+
+    /* Stats bar grid formatting */
+    .stats {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+        padding: 0 !important;
+        margin: 15px 0 !important;
+        list-style: none !important;
+    }
+
+    .stats li {
+        background-color: var(--color-background-hover) !important;
+        padding: 8px !important;
+        border-radius: 6px !important;
+        text-align: center !important;
+    }
+
+    /* Table Adjustments */
+    .records {
+        width: 100% !important;
+    }
+
+    /* Meta / Sidebar Container */
+    .meta-container,
+    main.page-list .meta-container {
+        width: 100% !important;
+        border-top: 1px solid var(--color-background-hover) !important;
+        padding-top: 15px !important;
+        box-sizing: border-box !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stats {
+        grid-template-columns: 1fr !important;
+    }
+
+    button,
+    .level-search-input {
+        min-height: 48px !important;
+        font-size: 1rem !important;
+    }
 }
