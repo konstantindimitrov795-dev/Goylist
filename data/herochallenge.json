@@ -79,6 +79,12 @@
             "link": "https://www.youtube.com/watch?v=kJllFR0ouFc",
             "percent": 100,
             "hz": 60
+        },
+        {
+            "user": "Krazmi",
+            "link": "https://youtu.be/W5TjHoXEfSo?si=44LlxNCvfx0tnftN",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
