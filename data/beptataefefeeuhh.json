@@ -13,6 +13,12 @@
             "link": "https://www.youtube.com/watch?v=_SqbumuYLOE",
             "percent": 100,
             "hz": 60
+        },
+        {
+          "user": "kuci",
+          "link": "https://youtu.be/2R1EP7o2b90",
+          "percent": 100,
+          "hz": 180
         }
     ]
 }
