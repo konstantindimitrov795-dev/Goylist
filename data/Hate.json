@@ -13,6 +13,12 @@
           "link": "https://youtu.be/Z9R0o1uFHk8",
           "percent": 100,
           "hz": 180
+        },
+        {
+            "user": "beshot",
+            "link": "https://www.youtube.com/watch?v=_SqbumuYLOE",
+            "percent": 100,
+            "hz": 60
         }
     ]
 }
